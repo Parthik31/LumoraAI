@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-lumora-primary: #2e8b57;
+  --color-lumora-secondary: #66bb6a;
+  --color-lumora-dark: #1b3c2f;
+  --color-lumora-light: #ffffff;
+}
+
+/* 1. Stop the rubber-band bounce effect on the document level */
+html {
+  overscroll-behavior-y: none; 
+}
+
+/* 2. Stop horizontal leakage, but explicitly KEEP vertical scrolling active */
+body {
+  overflow-x: hidden; 
+  overflow-y: auto; 
+  width: 100%;
+  background-color: #f9fafb; /* Matches Tailwind's bg-gray-50 */
+}
+
+/* Force the pointer cursor globally on interactive elements */
+a, button, select, input[type="submit"], [role="button"] {
+  cursor: pointer !important;
+}
