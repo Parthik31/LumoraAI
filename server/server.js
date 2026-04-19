@@ -13,7 +13,7 @@ dotenv.config();
 const app = express();
 
 const corsOptions = {
-    origin: ['http://localhost:5173', 'https://your-frontend-name.netlify.app'], // Add your Netlify URL here once you have it
+    origin: ['http://localhost:5173', 'https://lumorasolarai.netlify.app'], // Add your Netlify URL here once you have it
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true // Crucial for cookies/tokens if you add them later
 };
