@@ -12,7 +12,12 @@ import User from './models/User.js';
 dotenv.config();
 const app = express();
 
-app.use(cors());
+const corsOptions = {
+    origin: ['http://localhost:5173', 'https://your-frontend-name.netlify.app'], // Add your Netlify URL here once you have it
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true // Crucial for cookies/tokens if you add them later
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Connect to MongoDB
